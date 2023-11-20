@@ -6,25 +6,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Information - Kyrgyzstan</title>
+
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
     <style>
-        /* Your existing styles here */
+        /* Your additional styles here */
+        body {
+            padding-top: 56px; /* Adjust this value based on your navbar height */
+        }
+
+        .navbar {
+            background-color: #007bff; /* Change this to your preferred navbar color */
+        }
+
+        .navbar-brand {
+            color: #ffffff !important; /* Change this to your preferred text color */
+        }
+
+        .nav-link {
+            color: #ffffff !important; /* Change this to your preferred text color */
+        }
+
+        .content-section {
+            margin-top: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Basic Information - <i>Kyrgyzstan<i></h1>
-    </header>
 
-    <nav>
-        <a href="welcome.html">WELCOME</a> |
-        <a href="basic_information.html">Basic information</a> |
-        <a href="culture.html">Culture</a> |
-        <a href="geography.html">Geography</a> |
-        <a href="contact_us.html">Contact us</a>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">Kyrgyzstan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">WELCOME</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="basic_information.html">Basic information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html">Culture</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="geography.html">Geography</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html">Contact us</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <section>
+    <!-- Content Section -->
+    <div class="container content-section">
+        <div class="row image-container">
+            <div class="col-md-12">
+                <img src="tasks/Kyrgyzstan.jpg" alt="Kyrgyzstan Image" class="img-fluid" style="width: 100%; height: auto;">
+                <p class="text-center">WELCOME TO KYRGYZSTAN!</p>
+            </div>
+        </div>
         <h2>Basic Information</h2>
         <p>
             Kyrgyzstan, officially the Kyrgyz Republic, is a landlocked country in Central Asia, lying in the Tian Shan
@@ -33,8 +85,24 @@
             southeast. Ethnic Kyrgyz make up most of the country’s seven million people, followed by significant
             minorities of Uzbek and Russians.
         </p>
-        <p>WELCOME to KG</p>
-    </section>
+
+        <!-- Image Section -->
+        <div class="row image-container">
+           
+            <div class="col-md-4">
+                <img src="path/to/kg-flag.jpg" alt="KG Flag Image" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="path/to/Emblem_of_Kyrgyzstan.svg.png" alt="Kyrgyzstan Emblem Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
