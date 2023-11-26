@@ -1,282 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction to Kyrgyzstan </title>
+    <title>Basic Information --- Kyrgyzstan</title>
+
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
     <style>
+        /* Your additional styles here */
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: hsl(0, 12%, 83%);
+            padding-top: 56px; /* Adjust this value based on your navbar height */
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
+        .navbar {
+            background-color: #a00202e8; /* Change this to your preferred navbar color */
+        }
+
+        .navbar-brand {
+            color: #f7f2f2 !important; /* Change this to your preferred text color */
+        }
+
+        .nav-link {
+            color: #ffffff !important; /* Change this to your preferred text color */
+        }
+
+        .content-section {
+            margin-top: 20px;
+        }
+
+        .image-container {
             text-align: center;
-        }
-
-        header p {
-            margin: 10px 0;
-        }
-
-        section {
-            background-color: #782020;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        table, th, td {
-            border: 1px solid #333;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #333;
-            color: #fff;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        form {
-            margin-top: 10px;
-        }
-
-        label, input, textarea {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
-
-        footer img {
-            max-width: 100%;
-            height: auto;
+            margin-top: 20px;
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>WELCOME | Basic information | Culture | Geography | Contact us</h1>
-        <p>
-            ARE YOU READY TO EXPLORE A NEW COUNTRY?
-        </p>
-    </header>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">Kyrgyzstan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">WELCOME</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="basic_information.html">Basic information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="culture.html">Culture</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="geography.html">Geography</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html">Contact us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <section id="basic-info">
+    <!-- Content Section -->
+    <div class="container content-section">
+        <div class="row image-container">
+            <div class="col-md-12">
+                <img src="tasks/Kyrgyzstan.jpg" alt="Kyrgyzstan Image" class="img-fluid" style="width: 100%; height: auto;">
+                <p class="text-center"><b>WELCOME TO KYRGYZSTAN!</b></p>
+            </div>
+        </div>
         <h2>Basic Information</h2>
-        <img src="Kyrgyzstan.jpg" alt="Kyrgyzstan Image">
         <p>
-            WELCOME TO KYRGYZSTAN! Kyrgyzstan, officially the Kyrgyz Republic, is a landlocked country in Central Asia, lying in the Tian Shan and Pamir mountains ranges. Bishkek is the capital and largest city of the country. Kyrgyzstan is bordered by Kazakhstan to the north, Uzbekistan to the west, Tajikistan to the south, and China to the east and southeast. Ethnic Kyrgyz make up most of the country’s seven million people, followed by significant minorities of Uzbek and Russians.
+            <b>Kyrgyzstan</b>, officially the Kyrgyz Republic, is a landlocked country in Central Asia, lying in the Tian Shan
+            and Pamir mountains ranges. Bishkek is the capital and largest city of the country. Kyrgyzstan is bordered
+            by Kazakhstan to the north, Uzbekistan to the west, Tajikistan to the south, and China to the east and
+            southeast. Ethnic Kyrgyz make up most of the country’s seven million people, followed by significant
+            minorities of Uzbek and Russians.
         </p>
-    </section>
 
-    <section id="culture">
-        <h2>Culture</h2>
-        <h3>Manas</h3>
-        <p>
-            Manas is an epic poem. The plot revolves around a series of events that coincide with the history of the region in the 9th century, primarily the interaction of the Kyrgyz people with other Turkic and Chinese people. Manas is the biggest by amount among the poems.
-        </p>
-        <img src="Manas.jpg" alt="Manas Image">
+        <!-- Image Section -->
+        <div class="row image-container">
+           
+            <div class="col-md-6">
+                <img src="https://www.state.gov/wp-content/uploads/2018/08/kg-lgflag.gif" alt="KG Flag Image" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="tasks/Emblem_of_Kyrgyzstan.svg.png" alt="Kyrgyzstan Emblem Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
 
-        <h3>Tush kyiz</h3>
-        <p>
-            Tush kyiz are large, elaborately embroidered wall hangings, traditionally made in Kyrgyzstan and Kazakhstan by women to commemorate the marriage of a son or daughter. Colors and designs are chosen to symbolize Kyrgyz traditions and rural life. Flowers, plants, animals, stylized horns, national designs, and emblems of Kyrgyz life are often found in these ornate and colorful embroideries.
-        </p>
-        <img src="Tush_Kyiz.jpg" alt="Tush Kyiz Image">
-
-        <h3>Sport</h3>
-        <p>
-            Football is the most popular sport in Kyrgyzstan. The official governing body is the Football Federation of Kyrgyz Republic, which was founded in 1992, after the split of the Soviet Union. It administers the Kyrgyzstan national football team.
-
-            Wrestling is also very popular. In the 2008 Summer Olympic Games, two athletes from Kyrgyzstan won medals in Greco-Roman wrestling: Kanatbek Begaliev (silver) and Ruslan Tyumenbayev (bronze).
-
-            Bandy is becoming increasingly popular in the country. The Kyrgyz national team took Kyrgyzstan's first medal at the Asian Winter Games when they captured the bronze. They played in the Bandy World Championship 2012, their first appearance in that tournament.
-
-            Martial Arts: Valentina Shevchenko is a Kyrgyzstani–Peruvian professional mixed martial artist who competes in the women's flyweight division of the Ultimate Fighting Championship (UFC), where she was formerly the Women's Flyweight champion.
-
-            Boxing: Dmitry Bivol is a Kyrgyzstani Professional Boxer from Tokmok, who competes in the Light Heavyweight Division. Since 2017, he has held the World Boxing Association Light Heavyweight Title. As of August 2019, Bivol is ranked as the world's best active light-heavyweight by the Transnational Boxing Rankings Board and BoxRec, and third by The Ring Magazine.
-        </p>
-    </section>
-
-    <section id="flag">
-        <h2>Flag</h2>
-        <img src="Kyrgyzstan_flag.jpg" alt="Kyrgyzstan Flag Image">
-        <p>
-            The 40-rayed yellow sun in the center of the national flag represents the 40 tribes that once made up the entirety of Kyrgyz culture before the intervention of Russia during the rise of the Soviet Union. The lines inside the sun represent the crown or tündük (Kyrgyz түндүк) of a yurt, a symbol replicated in many facets of Kyrgyz architecture. The red portion of the flag represents peace and openness of Kyrgyzstan.
-        </p>
-    </section>
-
-    <section id="holidays">
-        <h2>National Holidays</h2>
-        <p>
-            In addition to celebrating the New Year each 1 January, the Kyrgyz observe the traditional New Year festival Nowruz on the vernal equinox. This spring holiday is celebrated with feasts and festivities such as the horse game Ulak Tartish.
-
-            This is the list of public holidays in Kyrgyzstan:
-        </p>
-        <ul>
-            <li>1 January – New Year's Day</li>
-            <li>7 January – Orthodox Christmas</li>
-            <li>23 February – Fatherland Defender's Day</li>
-            <li>8 March – Women's Day</li>
-            <li>21–23 March – Nooruz Mairamy, Persian New Year (spring festival)</li>
-            <li>7 April – Day of National Revolution</li>
-            <li>1 May – Labor Day</li>
-            <li>5 May – Constitution Day</li>
-            <li>8 May – Remembrance Day</li>
-            <li>9 May – Victory Day</li>
-            <li>31 August – Independence Day</li>
-            <li>7–8 November – Days of History and Commemoration of Ancestors</li>
-            <li>Two additional Muslim holidays Orozo Ayt and Qurman (or Qurban) Ayt are defined by the lunar calendar.</li>
-        </ul>
-    </section>
-
-    <section id="geography">
-        <h2>Geography</h2>
-        <img src="KG_map.png" alt="Kyrgyzstan Map Image">
-        <p>
-            Kyrgyzstan is a landlocked country in Central Asia, bordering Kazakhstan, China, Tajikistan, and Uzbekistan. It lies between latitudes 39° and 44° N, and longitudes 69° and 81° E. It is farther from the sea than any other individual country, and all its rivers flow into closed drainage systems which do not reach the sea. The mountainous region of the Tian Shan covers over 80% of the country (Kyrgyzstan is occasionally referred to as "the Switzerland of Central Asia", as a result), with the remainder made up of valleys and basins.
-        </p>
-        <p>
-            Populations of Kyrgyzstan according to ethnic group 2022:
-        </p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Ethnic group</th>
-                    <th>2022 census number</th>
-                    <th>%</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Kyrgyz</td>
-                    <td>5,379,000</td>
-                    <td>77.5</td>
-                </tr>
-                <tr>
-                    <td>Uzbek</td>
-                    <td>986,900</td>
-                    <td>14.2</td>
-                </tr>
-                <tr>
-                    <td>Russians</td>
-                    <td>282,800</td>
-                    <td>4.1</td>
-                </tr>
-                <tr>
-                    <td>Ukrainians</td>
-                    <td>-</td>
-                    <td>-</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section id="video">
-        <h2>Video</h2>
-        <p>
-            Here's a video about Kyrgyzstan in English: <a href="https://youtu.be/ki5N4BYQS34?si=veB186i4NSQVGfTk" target="_blank">Watch Video</a>
-        </p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>
-            If you have any questions, please contact us. We will try to give answers to your questions and more information about Kyrgyzstan. Leave your contact information.
-        </p>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="question">Your question:</label>
-            <textarea id="question" name="question" rows="4" required></textarea>
-
-            <label for="country">Your country:</label>
-            <input type="text" id="country" name="country" required>
-
-            <p>
-                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
-                <label for="newsletter">I want to receive monthly newsletters</label>
-            </p>
-
-            <p>
-                <input type="checkbox" id="agree" name="agree" value="yes" required>
-                <label for="agree">I agree to share my personal data</label>
-            </p>
-
-            <p>
-                <button type="reset">Reset</button>
-                <button type="submit">Submit</button>
-            </p>
-        </form>
-    </section>
-
-    <footer>
-        <img src="KG.png" alt="Kyrgyzstan Logo Image">
-    </footer>
+    <!-- Add Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
