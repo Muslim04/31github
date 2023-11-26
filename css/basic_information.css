@@ -1,0 +1,25 @@
+ /* Your additional styles here */
+ body {
+    padding-top: 56px; /* Adjust this value based on your navbar height */
+}
+
+.navbar {
+    background-color: #a00202e8; /* Change this to your preferred navbar color */
+}
+
+.navbar-brand {
+    color: #f7f2f2 !important; /* Change this to your preferred text color */
+}
+
+.nav-link {
+    color: #ffffff !important; /* Change this to your preferred text color */
+}
+
+.content-section {
+    margin-top: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
