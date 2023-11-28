@@ -132,7 +132,9 @@
     <title>Welcome to Kyrgyzstan</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <!-- <link href="css/index.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" id="defaultStylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index_french.css" id="frenchStylesheet" disabled>
 </head>
 
 <body class="bg-light">
@@ -148,7 +150,11 @@
         <a href="geography.html" class="text-white text-decoration-none">Geography</a> |
         <a href="contact_us.html" class="text-white text-decoration-none">Contact us</a>
     </nav>
-
+    <label for="languageSelector">Choose Language:</label>
+<select id="languageSelector">
+    <option value="default">Default (English)</option>
+    <option value="french">French</option>
+</select>
     <section class="container mt-4">
         <h2 class="text-danger">WELCOME</h2>
         <p class="text-muted">
@@ -163,6 +169,30 @@
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the language selector element
+            var languageSelector = document.getElementById('languageSelector');
+    
+            // Get the default and French language stylesheets
+            var defaultStylesheet = document.getElementById('defaultStylesheet');
+            var frenchStylesheet = document.getElementById('frenchStylesheet');
+    
+            // Add an event listener to the language selector
+            languageSelector.addEventListener('change', function () {
+                // Check the selected value
+                if (languageSelector.value === 'default') {
+                    // Enable the default stylesheet and disable the French one
+                    defaultStylesheet.removeAttribute('disabled');
+                    frenchStylesheet.setAttribute('disabled', 'true');
+                } else if (languageSelector.value === 'french') {
+                    // Enable the French stylesheet and disable the default one
+                    defaultStylesheet.setAttribute('disabled', 'true');
+                    frenchStylesheet.removeAttribute('disabled');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
