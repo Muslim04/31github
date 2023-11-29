@@ -8,13 +8,16 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/contact_us.css" rel="stylesheet">
+    <!-- Add your language-specific stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/contact_us.css" id="defaultStylesheet">
+    <link rel="stylesheet" type="text/css" href="css/contact_us_french.css" id="frenchStylesheet" disabled>
 </head>
 
 <body>
 
     <nav class="navbar navbar-dark bg-secondary navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">WELCOME</a>
+            <a class="navbar-brand" href="index.html" id="navbarBrandContent">WELCOME</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,26 +25,37 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="basic_information.html">Basic information</a>
+                        <a class="nav-link" href="basic_information.html" id="basicInfoNavLink">Basic information</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="culture.html">Culture</a>
+                        <a class="nav-link" href="culture.html" id="cultureNavLink">Culture</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="geography.html">Geography</a>
+                        <a class="nav-link" href="geography.html" id="geographyNavLink">Geography</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact_us.html">Contact us</a>
+                        <a class="nav-link" href="contact_us.html" id="contactUsNavLink">Contact us</a>
                     </li>
                 </ul>
+            </div>
+            <!-- Language Selector Button -->
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" id="languageSelector">
+                Choose Language
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" data-lang="default">Default (English)</a>
+                <a class="dropdown-item" href="#" data-lang="french">French</a>
             </div>
         </div>
     </nav>
 
     <section class="container mt-4">
-        <h2 class="text-danger">Contact us</h2>
+        <h2 id="contactTitle" class="text-danger">Contact us</h2>
 
-        <form >
+        <form>
             <div class="mb-3">
                 <label for="name" class="form-label">Name:</label>
                 <input type="text" class="form-control" id="name" name="name" required>
@@ -67,25 +81,103 @@
                 <label class="form-check-label" for="agree">I agree to share my personal data</label>
             </div>
             <div class="mb-3">
-                <label for="interest">Did you interest in Kyrgyzstan?</label>
+                <label for="interest" id="interestLabel">Did you interest in Kyrgyzstan?</label>
                 <div>
                     <input type="radio" id="interestYes" name="interest" value="Yes">
-                    <label for="interestYes">Yes</label>
+                    <label for="interestYes" id="interestYesLabel">Yes</label>
 
                     <input type="radio" id="interestNo" name="interest" value="No">
-                    <label for="interestNo">No</label>
+                    <label for="interestNo" id="interestNoLabel">No</label>
                 </div>
             </div>
             <button type="reset" class="btn btn-secondary">Reset</button>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
-        <img src="https://www.journalofnomads.com/wp-content/uploads/2019/09/Ala-Kul-Lake-Kyrgyzstan-2.jpg" alt="Kyrgyzstan" class="img-fluid mt-4">
+        <img src="https://www.journalofnomads.com/wp-content/uploads/2019/09/Ala-Kul-Lake-Kyrgyzstan-2.jpg" alt="Kyrgyzstan"
+            class="img-fluid mt-4">
 
     </section>
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Add your translation JavaScript code -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the language selector element
+            var languageSelector = document.querySelector('#languageSelector');
+
+            // Get the elements with language-specific content
+            var navbarBrandContent = document.getElementById('navbarBrandContent');
+            var basicInfoNavLink = document.getElementById('basicInfoNavLink');
+            var cultureNavLink = document.getElementById('cultureNavLink');
+            var geographyNavLink = document.getElementById('geographyNavLink');
+            var contactUsNavLink = document.getElementById('contactUsNavLink');
+            var contactTitle = document.getElementById('contactTitle');
+            var interestLabel = document.getElementById('interestLabel');
+            var interestYesLabel = document.getElementById('interestYesLabel');
+            var interestNoLabel = document.getElementById('interestNoLabel');
+
+            // Define translations
+            var translations = {
+                'default': {
+                    'navbarBrand': 'WELCOME',
+                    'basicInfoNavLink': 'Basic information',
+                    'cultureNavLink': 'Culture',
+                    'geographyNavLink': 'Geography',
+                    'contactUsNavLink': 'Contact us',
+                    'contactTitle': 'Contact us',
+                    'interestLabel': 'Did you interest in Kyrgyzstan?',
+                    'interestYesLabel': 'Yes',
+                    'interestNoLabel': 'No'
+                    // Add more translations as needed
+                },
+                'french': {
+                    'navbarBrand': 'BIENVENUE',
+                    'basicInfoNavLink': 'Informations de base',
+                    'cultureNavLink': 'Culture',
+                    'geographyNavLink': 'Géographie',
+                    'contactUsNavLink': 'Contactez-nous',
+                    'contactTitle': 'Contactez-nous',
+                    'interestLabel': 'Êtes-vous intéressé par le Kirghizistan?',
+                    'interestYesLabel': 'Oui',
+                    'interestNoLabel': 'Non'
+                    // Add more translations as needed
+                }
+            };
+
+            // Function to update content based on language
+            function updateContent(language) {
+                var translation = translations[language] || translations['default'];
+
+                // Update content based on translation
+                navbarBrandContent.textContent = translation['navbarBrand'];
+                basicInfoNavLink.textContent = translation['basicInfoNavLink'];
+                cultureNavLink.textContent = translation['cultureNavLink'];
+                geographyNavLink.textContent = translation['geographyNavLink'];
+                contactUsNavLink.textContent = translation['contactUsNavLink'];
+                contactTitle.textContent = translation['contactTitle'];
+                interestLabel.textContent = translation['interestLabel'];
+                interestYesLabel.textContent = translation['interestYesLabel'];
+                interestNoLabel.textContent = translation['interestNoLabel'];
+                // Update other content as needed
+            }
+
+            // Add an event listener to the language selector
+            var languageButtons = document.querySelectorAll('.dropdown-item');
+            languageButtons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    // Update content when language changes
+                    updateContent(button.getAttribute('data-lang'));
+                });
+            });
+
+            // Set initial content based on the default language
+            updateContent(languageSelector.textContent);
+        });
+    </script>
 </body>
 
 </html>

@@ -9,34 +9,8 @@
 
     <!-- Add Bootstrap CSS link -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
-    <style>
-        /* Your additional styles here */
-        body {
-            padding-top: 56px; /* Adjust this value based on your navbar height */
-        }
+    <link href="css/basic_information.css" rel="stylesheet">
 
-        .navbar {
-            background-color: #a00202e8; /* Change this to your preferred navbar color */
-        }
-
-        .navbar-brand {
-            color: #f7f2f2 !important; /* Change this to your preferred text color */
-        }
-
-        .nav-link {
-            color: #ffffff !important; /* Change this to your preferred text color */
-        }
-
-        .content-section {
-            margin-top: 20px;
-        }
-
-        .image-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 
 <body>
@@ -103,6 +77,106 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us - Welcome to Kyrgyzstan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/contact_us.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-secondary navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">WELCOME</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="basic_information.html">Basic information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="culture.html">Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="geography.html">Geography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mt-4">
+        <h2 class="text-danger">Contact us</h2>
+
+        <form >
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="question" class="form-label">Your question:</label>
+                <textarea class="form-control" id="question" name="question" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="country" class="form-label">Your country:</label>
+                <input type="text" class="form-control" id="country" name="country" required>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+                <label class="form-check-label" for="newsletter">I want to receive monthly newsletters</label>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="agree" name="agree" required>
+                <label class="form-check-label" for="agree">I agree to share my personal data</label>
+            </div>
+            <div class="mb-3">
+                <label for="interest">Did you interest in Kyrgyzstan?</label>
+                <div>
+                    <input type="radio" id="interestYes" name="interest" value="Yes">
+                    <label for="interestYes">Yes</label>
+
+                    <input type="radio" id="interestNo" name="interest" value="No">
+                    <label for="interestNo">No</label>
+                </div>
+            </div>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <img src="https://www.journalofnomads.com/wp-content/uploads/2019/09/Ala-Kul-Lake-Kyrgyzstan-2.jpg" alt="Kyrgyzstan" class="img-fluid mt-4">
+
+    </section>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

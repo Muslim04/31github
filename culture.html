@@ -13,7 +13,7 @@
 <body>
 
     <nav class="navbar navbar-dark bg-secondary navbar-expand-lg">
-        <div class="container">
+        
             <a class="navbar-brand" href="index.html">WELCOME</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +34,54 @@
                         <a class="nav-link" href="contact_us.html">Contact us</a>
                     </li>
                 </ul>
+            </div>
+            <!-- Language Selector Button -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" id="languageSelector">
+                    Choose Language
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" data-lang="default">Default (English)</a>
+                    <a class="dropdown-item" href="#" data-lang="french">French</a>
+                </div>
+            </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#" id="navbarBrandContent">Kyrgyzstan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" id="welcomeNavLink">WELCOME</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="basic_information.html" id="basicInfoNavLink">Basic information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="culture.html" id="cultureNavLink">Culture</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="geography.html" id="geographyNavLink">Geography</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html" id="contactUsNavLink">Contact us</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Language Selector Button -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" id="languageSelector">
+                Choose Language
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" data-lang="default">Default (English)</a>
+                <a class="dropdown-item" href="#" data-lang="french">French</a>
             </div>
         </div>
     </nav>
@@ -65,6 +113,81 @@
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Translation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the language selector element
+            var languageSelector = document.querySelector('#languageSelector');
+
+            // Get the elements with language-specific content
+            var headings = document.querySelectorAll('h2, h3');
+            var paragraphs = document.querySelectorAll('p');
+
+            // Define translations
+            var translations = {
+                'default': {
+                    'h2': 'Culture',
+                    'h3-manas': 'Manas',
+                    'p-manas': 'Manas, an epic poem, revolves around a series of events...',
+                    'h3-tush-kyiz': 'Tush kyiz',
+                    'p-tush-kyiz': 'Tush kyiz are large, elaborately embroidered wall hangings...',
+                    'h3-sport': 'Sport',
+                    'p-sport': 'Football is the most popular sport in Kyrgyzstan...',
+                    'h3-flag': 'Flag',
+                    'p-flag': 'The 40-rayed yellow sun in the center of the national flag represents...',
+                    'h3-national-holidays': 'National Holidays',
+                    'p-national-holidays': 'In addition to celebrating the New Year each 1 January...',
+                    // Add more translations as needed
+                },
+                'french': {
+                    'h2': 'Culture (French)',
+                    'h3-manas': 'Manas (French)',
+                    'p-manas': 'Manas, un poème épique, tourne autour d\'une série d\'événements...',
+                    'h3-tush-kyiz': 'Tush kyiz (French)',
+                    'p-tush-kyiz': 'Les tush kyiz sont de grandes tentures murales richement brodées...',
+                    'h3-sport': 'Sport (French)',
+                    'p-sport': 'Le football est le sport le plus populaire au Kirghizistan...',
+                    'h3-flag': 'Drapeau (French)',
+                    'p-flag': 'Le soleil jaune à 40 rayons au centre du drapeau national représente...',
+                    'h3-national-holidays': 'Fêtes nationales (French)',
+                    'p-national-holidays': 'En plus de célébrer le Nouvel An chaque 1er janvier...',
+                    // Add more translations as needed
+                }
+            };
+
+            // Function to update content based on language
+            function updateContent(language) {
+                var translation = translations[language] || translations['default'];
+
+                // Update content based on translation
+                headings.forEach(function (element) {
+                    var key = element.tagName.toLowerCase() + '-' + element.textContent.toLowerCase().replace(/\s+/g, '-');
+                    element.textContent = translation[key] || element.textContent;
+                });
+
+                paragraphs.forEach(function (element) {
+                    var key = 'p-' + element.textContent.toLowerCase().replace(/\s+/g, '-');
+                    element.textContent = translation[key] || element.textContent;
+                });
+            }
+
+// Add an event listener to the language selector
+languageSelector.addEventListener('click', function (event) {
+    event.preventDefault();
+    // Update content when language changes
+    console.log("dshka");
+    updateContent(event.target.getAttribute('data-lang'));
+});
+
+// Manually initialize the Bootstrap dropdown
+var bootstrapDropdown = new bootstrap.Dropdown(document.querySelector('.btn-group'));
+
+// Set initial content based on the default language
+updateContent(languageSelector.innerHTML);
+
+        });
+    </script>
 </body>
 
 </html>
