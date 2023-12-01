@@ -92,83 +92,83 @@
     
     <!-- Add your translation JavaScript code -->
     <script>
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     // Get the language selector element
-        //     var languageSelector = document.getElementById('languageSelector');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the language selector element
+            var languageSelector = document.getElementById('languageSelector');
     
-        //     // Get the elements with language-specific content
-        //     var navbarBrandContent = document.getElementById('navbarBrandContent');
-        //     var welcomeNavLink = document.getElementById('welcomeNavLink');
-        //     var basicInfoNavLink = document.getElementById('basicInfoNavLink');
-        //     var cultureNavLink = document.getElementById('cultureNavLink');
-        //     var geographyNavLink = document.getElementById('geographyNavLink');
-        //     var contactUsNavLink = document.getElementById('contactUsNavLink');
-        //     var welcomeMessage = document.getElementById('welcomeMessage');
-        //     var basicInfoTitle = document.getElementById('basicInfoTitle');
-        //     var basicInfoContent = document.getElementById('basicInfoContent');
-        //     var countryName = document.getElementById('countryName');
+            // Get the elements with language-specific content
+            var navbarBrandContent = document.getElementById('navbarBrandContent');
+            var welcomeNavLink = document.getElementById('welcomeNavLink');
+            var basicInfoNavLink = document.getElementById('basicInfoNavLink');
+            var cultureNavLink = document.getElementById('cultureNavLink');
+            var geographyNavLink = document.getElementById('geographyNavLink');
+            var contactUsNavLink = document.getElementById('contactUsNavLink');
+            var welcomeMessage = document.getElementById('welcomeMessage');
+            var basicInfoTitle = document.getElementById('basicInfoTitle');
+            var basicInfoContent = document.getElementById('basicInfoContent');
+            var countryName = document.getElementById('countryName');
     
-        //     // Define translations
-        //     var translations = {
-        //         'default': {
-        //             'navbarBrand': 'Kyrgyzstan',
-        //             'welcomeNavLink': 'WELCOME',
-        //             'basicInfoNavLink': 'Basic information',
-        //             'cultureNavLink': 'Culture',
-        //             'geographyNavLink': 'Geography',
-        //             'contactUsNavLink': 'Contact us',
-        //             'welcomeMessage': 'WELCOME TO KYRGYZSTAN!',
-        //             'basicInfoTitle': 'Basic Information',
-        //             'basicInfoContent': '<b>Kyrgyzstan</b>, officially the Kyrgyz Republic, is a landlocked country in Central Asia, lying in the Tian Shan and Pamir mountains ranges. Bishkek is the capital and largest city of the country. Kyrgyzstan is bordered by Kazakhstan to the north, Uzbekistan to the west, Tajikistan to the south, and China to the east and southeast. Ethnic Kyrgyz make up most of the country’s seven million people, followed by significant minorities of Uzbek and Russians.',
-        //             'countryName': 'Kyrgyzstan'
-        //             // Add more translations as needed
-        //         },
-        //         'french': {
-        //             'navbarBrand': 'Kirghizistan',
-        //             'welcomeNavLink': 'BIENVENUE',
-        //             'basicInfoNavLink': 'Informations de base',
-        //             'cultureNavLink': 'Culture',
-        //             'geographyNavLink': 'Géographie',
-        //             'contactUsNavLink': 'Contactez-nous',
-        //             'welcomeMessage': 'BIENVENUE AU KIRGHIZISTAN!',
-        //             'basicInfoTitle': 'Informations de base',
-        //             'basicInfoContent': '<b>Kirghizistan</b>, officiellement la République kirghize, est un pays enclavé d\'Asie centrale, situé dans les chaînes de montagnes du Tian Shan et du Pamir. Bichkek est la capitale et la plus grande ville du pays. Le Kirghizistan est bordé par le Kazakhstan au nord, l\'Ouzbékistan à l\'ouest, le Tadjikistan au sud et la Chine à l\'est et au sud-est. Les Kirghizes ethniques constituent la majeure partie des sept millions d\'habitants du pays, suivis de minorités importantes d\'Ouzbeks et de Russes.',
-        //             'countryName': 'Kirghizistan'
-        //             // Add more translations as needed
-        //         }
-        //     };
+            // Define translations
+            var translations = {
+                'default': {
+                    'navbarBrand': 'Kyrgyzstan',
+                    'welcomeNavLink': 'WELCOME',
+                    'basicInfoNavLink': 'Basic information',
+                    'cultureNavLink': 'Culture',
+                    'geographyNavLink': 'Geography',
+                    'contactUsNavLink': 'Contact us',
+                    'welcomeMessage': 'WELCOME TO KYRGYZSTAN!',
+                    'basicInfoTitle': 'Basic Information',
+                    'basicInfoContent': '<b>Kyrgyzstan</b>, officially the Kyrgyz Republic, is a landlocked country in Central Asia, lying in the Tian Shan and Pamir mountains ranges. Bishkek is the capital and largest city of the country. Kyrgyzstan is bordered by Kazakhstan to the north, Uzbekistan to the west, Tajikistan to the south, and China to the east and southeast. Ethnic Kyrgyz make up most of the country’s seven million people, followed by significant minorities of Uzbek and Russians.',
+                    'countryName': 'Kyrgyzstan'
+                    // Add more translations as needed
+                },
+                'french': {
+                    'navbarBrand': 'Kirghizistan',
+                    'welcomeNavLink': 'BIENVENUE',
+                    'basicInfoNavLink': 'Informations de base',
+                    'cultureNavLink': 'Culture',
+                    'geographyNavLink': 'Géographie',
+                    'contactUsNavLink': 'Contactez-nous',
+                    'welcomeMessage': 'BIENVENUE AU KIRGHIZISTAN!',
+                    'basicInfoTitle': 'Informations de base',
+                    'basicInfoContent': '<b>Kirghizistan</b>, officiellement la République kirghize, est un pays enclavé d\'Asie centrale, situé dans les chaînes de montagnes du Tian Shan et du Pamir. Bichkek est la capitale et la plus grande ville du pays. Le Kirghizistan est bordé par le Kazakhstan au nord, l\'Ouzbékistan à l\'ouest, le Tadjikistan au sud et la Chine à l\'est et au sud-est. Les Kirghizes ethniques constituent la majeure partie des sept millions d\'habitants du pays, suivis de minorités importantes d\'Ouzbeks et de Russes.',
+                    'countryName': 'Kirghizistan'
+                    // Add more translations as needed
+                }
+            };
     
-        //     // Function to update content based on language
-        //     function updateContent(language) {
-        //         var translation = translations[language] || translations['default'];
+            // Function to update content based on language
+            function updateContent(language) {
+                var translation = translations[language] || translations['default'];
     
-        //         // Update content based on translation
-        //         navbarBrandContent.textContent = translation['navbarBrand'];
-        //         welcomeNavLink.textContent = translation['welcomeNavLink'];
-        //         basicInfoNavLink.textContent = translation['basicInfoNavLink'];
-        //         cultureNavLink.textContent = translation['cultureNavLink'];
-        //         geographyNavLink.textContent = translation['geographyNavLink'];
-        //         contactUsNavLink.textContent = translation['contactUsNavLink'];
-        //         welcomeMessage.innerHTML = translation['welcomeMessage'];
-        //         basicInfoTitle.textContent = translation['basicInfoTitle'];
-        //         basicInfoContent.innerHTML = translation['basicInfoContent'];
-        //         countryName.innerHTML = translation['countryName'];
-        //         // Update other content as needed
-        //     }
+                // Update content based on translation
+                navbarBrandContent.textContent = translation['navbarBrand'];
+                welcomeNavLink.textContent = translation['welcomeNavLink'];
+                basicInfoNavLink.textContent = translation['basicInfoNavLink'];
+                cultureNavLink.textContent = translation['cultureNavLink'];
+                geographyNavLink.textContent = translation['geographyNavLink'];
+                contactUsNavLink.textContent = translation['contactUsNavLink'];
+                welcomeMessage.innerHTML = translation['welcomeMessage'];
+                basicInfoTitle.textContent = translation['basicInfoTitle'];
+                basicInfoContent.innerHTML = translation['basicInfoContent'];
+                countryName.innerHTML = translation['countryName'];
+                // Update other content as needed
+            }
     
-        //     // Add an event listener to the language selector
-        //     var languageButtons = document.querySelectorAll('.dropdown-item');
-        //     languageButtons.forEach(function(button) {
-        //         button.addEventListener('click', function(event) {
-        //             event.preventDefault();
-        //             // Update content when language changes
-        //             updateContent(button.getAttribute('data-lang'));
-        //         });
-        //     });
+            // Add an event listener to the language selector
+            var languageButtons = document.querySelectorAll('.dropdown-item');
+            languageButtons.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    // Update content when language changes
+                    updateContent(button.getAttribute('data-lang'));
+                });
+            });
     
-        //     // Set initial content based on the default language
-        //     updateContent(languageSelector.value);
-        // });
+            // Set initial content based on the default language
+            updateContent(languageSelector.value);
+        });
     </script>
 </body>
 

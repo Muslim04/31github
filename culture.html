@@ -6,47 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Culture - Welcome to Kyrgyzstan</title>
     <!-- Bootstrap CSS -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/culture.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/culture.css" id="defaultStylesheet">
+    <link rel="stylesheet" type="text/css" href="css/culture.css" id="frenchStylesheet" disabled>
 </head>
 
 <body>
-
-    <nav class="navbar navbar-dark bg-secondary navbar-expand-lg">
-        
-            <a class="navbar-brand" href="index.html">WELCOME</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="basic_information.html">Basic information</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="culture.html">Culture</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="geography.html">Geography</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact_us.html">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Language Selector Button -->
-            <div class="btn-group">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false" id="languageSelector">
-                    Choose Language
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#" data-lang="default">Default (English)</a>
-                    <a class="dropdown-item" href="#" data-lang="french">French</a>
-                </div>
-            </div>
-    </nav>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <a class="navbar-brand" href="#" id="navbarBrandContent">Kyrgyzstan</a>
@@ -59,10 +28,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.html" id="welcomeNavLink">WELCOME</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="basic_information.html" id="basicInfoNavLink">Basic information</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="culture.html" id="cultureNavLink">Culture</a>
                 </li>
                 <li class="nav-item">
@@ -90,23 +59,31 @@
         <h2 class="text-danger">Culture</h2>
 
         <h3>Manas</h3>
-        <p>Manas, an epic poem, revolves around a series of events that coincide with the history of the region in the 9th century, primarily the interaction of the Kyrgyz people with other Turkic and Chinese people. Manas is the biggest among the poems.</p>
+        <p>Manas, an epic poem, revolves around a series of events that coincide with the history of the region in the 9th
+            century, primarily the interaction of the Kyrgyz people with other Turkic and Chinese people. Manas is the
+            biggest among the poems.</p>
         <img src="tasks/Manas.jpg" alt="Manas" class="img-fluid">
 
         <h3>Tush kyiz</h3>
-        <p>Tush kyiz are large, elaborately embroidered wall hangings, traditionally made in Kyrgyzstan and Kazakhstan by women to commemorate the marriage of a son or daughter. Colors and designs are chosen to symbolize Kyrgyz traditions and rural life. Flowers, plants, animals, stylized horns, national designs, and emblems of Kyrgyz life are often found in these ornate and colorful embroideries.</p>
+        <p>Tush kyiz are large, elaborately embroidered wall hangings, traditionally made in Kyrgyzstan and Kazakhstan by
+            women to commemorate the marriage of a son or daughter. Colors and designs are chosen to symbolize Kyrgyz
+            traditions and rural life. Flowers, plants, animals, stylized horns, national designs, and emblems of Kyrgyz
+            life are often found in these ornate and colorful embroideries.</p>
         <img src="tasks/Tush_Kyiz.jpg" alt="Tush Kyiz" class="img-fluid">
 
         <h3>Sport</h3>
-        <p>Football is the most popular sport in Kyrgyzstan. The official governing body is the Football Federation of Kyrgyz Republic, which was founded in 1992...</p>
+        <p>Football is the most popular sport in Kyrgyzstan. The official governing body is the Football Federation of
+            Kyrgyz Republic, which was founded in 1992...</p>
         <!-- Include information about wrestling, bandy, martial arts, boxing, etc. -->
 
         <h3>Flag</h3>
-        <p>The 40-rayed yellow sun in the center of the national flag represents the 40 tribes that once made up the entirety of Kyrgyz culture before the intervention of Russia during the rise of the Soviet Union...</p>
+        <p>The 40-rayed yellow sun in the center of the national flag represents the 40 tribes that once made up the
+            entirety of Kyrgyz culture before the intervention of Russia during the rise of the Soviet Union...</p>
         <img src="tasks/kyrgyzstan_flag.jpg" alt="Kyrgyzstan Flag" class="img-fluid">
 
         <h3>National Holidays</h3>
-        <p>In addition to celebrating the New Year each 1 January, the Kyrgyz observe the traditional New Year festival Nowruz on the vernal equinox...</p>
+        <p>In addition to celebrating the New Year each 1 January, the Kyrgyz observe the traditional New Year festival
+            Nowruz on the vernal equinox...</p>
         <!-- Include the list of public holidays in Kyrgyzstan -->
 
     </section>
@@ -114,11 +91,15 @@
     <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <!-- Translation Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Get the language selector element
-            var languageSelector = document.querySelector('#languageSelector');
+            var languageSelector = document.getElementById('languageSelector');
 
             // Get the elements with language-specific content
             var headings = document.querySelectorAll('h2, h3');
@@ -127,31 +108,21 @@
             // Define translations
             var translations = {
                 'default': {
-                    'h2': 'Culture',
-                    'h3-manas': 'Manas',
-                    'p-manas': 'Manas, an epic poem, revolves around a series of events...',
-                    'h3-tush-kyiz': 'Tush kyiz',
-                    'p-tush-kyiz': 'Tush kyiz are large, elaborately embroidered wall hangings...',
-                    'h3-sport': 'Sport',
-                    'p-sport': 'Football is the most popular sport in Kyrgyzstan...',
-                    'h3-flag': 'Flag',
-                    'p-flag': 'The 40-rayed yellow sun in the center of the national flag represents...',
-                    'h3-national-holidays': 'National Holidays',
-                    'p-national-holidays': 'In addition to celebrating the New Year each 1 January...',
+                    'Culture': 'Culture',
+                    'Manas': 'Manas',
+                    'Tush Kyiz': 'Tush kyiz',
+                    'Sport': 'Sport',
+                    'Flag': 'Flag',
+                    'National Holidays': 'National Holidays',
                     // Add more translations as needed
                 },
                 'french': {
-                    'h2': 'Culture (French)',
-                    'h3-manas': 'Manas (French)',
-                    'p-manas': 'Manas, un poème épique, tourne autour d\'une série d\'événements...',
-                    'h3-tush-kyiz': 'Tush kyiz (French)',
-                    'p-tush-kyiz': 'Les tush kyiz sont de grandes tentures murales richement brodées...',
-                    'h3-sport': 'Sport (French)',
-                    'p-sport': 'Le football est le sport le plus populaire au Kirghizistan...',
-                    'h3-flag': 'Drapeau (French)',
-                    'p-flag': 'Le soleil jaune à 40 rayons au centre du drapeau national représente...',
-                    'h3-national-holidays': 'Fêtes nationales (French)',
-                    'p-national-holidays': 'En plus de célébrer le Nouvel An chaque 1er janvier...',
+                    'Culture': 'Culture (French)',
+                    'Manas': 'Manas (French)',
+                    'Tush Kyiz': 'Tush kyiz (French)',
+                    'Sport': 'Sport (French)',
+                    'Flag': 'Flag (French)',
+                    'National Holidays': 'National Holidays (French)',
                     // Add more translations as needed
                 }
             };
@@ -162,29 +133,28 @@
 
                 // Update content based on translation
                 headings.forEach(function (element) {
-                    var key = element.tagName.toLowerCase() + '-' + element.textContent.toLowerCase().replace(/\s+/g, '-');
-                    element.textContent = translation[key] || element.textContent;
+                    var key = element.textContent.trim();
+                    element.textContent = translation[key] || key;
                 });
 
                 paragraphs.forEach(function (element) {
-                    var key = 'p-' + element.textContent.toLowerCase().replace(/\s+/g, '-');
-                    element.textContent = translation[key] || element.textContent;
+                    var key = element.textContent.trim();
+                    element.textContent = translation[key] || key;
                 });
             }
 
-// Add an event listener to the language selector
-languageSelector.addEventListener('click', function (event) {
-    event.preventDefault();
-    // Update content when language changes
-    console.log("dshka");
-    updateContent(event.target.getAttribute('data-lang'));
-});
+            // Add an event listener to the language selector
+            languageSelector.addEventListener('click', function (event) {
+                event.preventDefault();
+                // Update content when language changes
+                updateContent(event.target.getAttribute('data-lang'));
+            });
 
-// Manually initialize the Bootstrap dropdown
-var bootstrapDropdown = new bootstrap.Dropdown(document.querySelector('.btn-group'));
+            // Manually initialize the Bootstrap dropdown
+            new bootstrap.Dropdown(document.querySelector('.btn-group'));
 
-// Set initial content based on the default language
-updateContent(languageSelector.innerHTML);
+            // Set initial content based on the default language
+            updateContent('default');
 
         });
     </script>
