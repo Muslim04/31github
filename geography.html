@@ -11,34 +11,45 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-dark bg-secondary navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">WELCOME</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#" id="navbarBrandContent">Kyrgyzstan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" id="welcomeNavLink">WELCOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="basic_information.html" id="basicInfoNavLink">Basic information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="culture.html" id="cultureNavLink">Culture</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="geography.html" id="geographyNavLink">Geography</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact_us.html" id="contactUsNavLink">Contact us</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Language Selector Button -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" id="languageSelector">
+                Choose Language
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="basic_information.html">Basic information</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="culture.html">Culture</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="geography.html">Geography</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact_us.html">Contact us</a>
-                    </li>
-                </ul>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" data-lang="default">Default (English)</a>
+                <a class="dropdown-item" href="#" data-lang="french">French</a>
             </div>
         </div>
     </nav>
 
-    <section class="container mt-16">
+    <section class="container mt-8">
         <h2 class="text-danger">Geography</h2>
 
         <img src="tasks/KG_map.png" alt="Kyrgyzstan Map" class="img-fluid">
@@ -92,6 +103,75 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add this script block at the end of your HTML body, after your existing script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the language selector element
+      var languageSelector = document.getElementById('languageSelector');
+  
+      // Get the elements with language-specific content
+      var navbarBrandContent = document.getElementById('navbarBrandContent');
+      var welcomeNavLink = document.getElementById('welcomeNavLink');
+      var basicInfoNavLink = document.getElementById('basicInfoNavLink');
+      var cultureNavLink = document.getElementById('cultureNavLink');
+      var geographyNavLink = document.getElementById('geographyNavLink');
+      var contactUsNavLink = document.getElementById('contactUsNavLink');
+  
+      // Define translations
+      var translations = {
+        'default': {
+          'navbarBrand': 'Kyrgyzstan',
+          'welcomeNavLink': 'WELCOME',
+          'basicInfoNavLink': 'Basic information',
+          'cultureNavLink': 'Culture',
+          'geographyNavLink': 'Geography',
+          'contactUsNavLink': 'Contact us'
+          // Add more translations as needed
+        },
+        'french': {
+          'navbarBrand': 'Kirghizstan',
+          'welcomeNavLink': 'BIENVENUE',
+          'basicInfoNavLink': 'Informations de base',
+          'cultureNavLink': 'Culture',
+          'geographyNavLink': 'Géographie',
+          'contactUsNavLink': 'Contactez-nous'
+          // Add more translations as needed
+        }
+      };
+  
+      // Function to update content based on language
+      function updateContent(language) {
+        var translation = translations[language] || translations['default'];
+  
+        // Update content based on translation
+        navbarBrandContent.textContent = translation['navbarBrand'];
+        welcomeNavLink.textContent = translation['welcomeNavLink'];
+        basicInfoNavLink.textContent = translation['basicInfoNavLink'];
+        cultureNavLink.textContent = translation['cultureNavLink'];
+        geographyNavLink.textContent = translation['geographyNavLink'];
+        contactUsNavLink.textContent = translation['contactUsNavLink'];
+        // Update other content as needed
+      }
+  
+      // Add an event listener to the language selector
+      var languageButtons = document.querySelectorAll('.dropdown-item');
+      languageButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+          event.preventDefault();
+          // Update content when language changes
+          updateContent(button.dataset.lang);
+        });
+      });
+  
+      // Set initial content based on the default language
+      updateContent(languageButtons[0].dataset.lang);
+    });
+  </script>
+  
 </body>
 
 </html>

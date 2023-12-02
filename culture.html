@@ -17,7 +17,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#" id="navbarBrandContent">Kyrgyzstan</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,22 +70,6 @@
             traditions and rural life. Flowers, plants, animals, stylized horns, national designs, and emblems of Kyrgyz
             life are often found in these ornate and colorful embroideries.</p>
         <img src="tasks/Tush_Kyiz.jpg" alt="Tush Kyiz" class="img-fluid">
-
-        <h3>Sport</h3>
-        <p>Football is the most popular sport in Kyrgyzstan. The official governing body is the Football Federation of
-            Kyrgyz Republic, which was founded in 1992...</p>
-        <!-- Include information about wrestling, bandy, martial arts, boxing, etc. -->
-
-        <h3>Flag</h3>
-        <p>The 40-rayed yellow sun in the center of the national flag represents the 40 tribes that once made up the
-            entirety of Kyrgyz culture before the intervention of Russia during the rise of the Soviet Union...</p>
-        <img src="tasks/kyrgyzstan_flag.jpg" alt="Kyrgyzstan Flag" class="img-fluid">
-
-        <h3>National Holidays</h3>
-        <p>In addition to celebrating the New Year each 1 January, the Kyrgyz observe the traditional New Year festival
-            Nowruz on the vernal equinox...</p>
-        <!-- Include the list of public holidays in Kyrgyzstan -->
-
     </section>
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
@@ -96,68 +80,67 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Translation Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get the language selector element
-            var languageSelector = document.getElementById('languageSelector');
+<!-- Add this script block at the end of your HTML body, after your existing script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the language selector element
+      var languageSelector = document.getElementById('languageSelector');
+  
+      // Get the elements with language-specific content
+      var headings = document.querySelectorAll('h2, h3');
+      var paragraphs = document.querySelectorAll('p');
+  
+      // Define translations
+      var translations = {
+        'default': {
+          'Culture': 'Culture',
+          'Manas': 'Manas',
+          'Tush Kyiz': 'Tush kyiz',
+          // Add more translations as needed
+        },
+        'french': {
+          'Culture': 'Culture',
+          'Manas': 'Manas',
+          'Tush Kyiz': 'Tush kyiz (French)',
 
-            // Get the elements with language-specific content
-            var headings = document.querySelectorAll('h2, h3');
-            var paragraphs = document.querySelectorAll('p');
-
-            // Define translations
-            var translations = {
-                'default': {
-                    'Culture': 'Culture',
-                    'Manas': 'Manas',
-                    'Tush Kyiz': 'Tush kyiz',
-                    'Sport': 'Sport',
-                    'Flag': 'Flag',
-                    'National Holidays': 'National Holidays',
-                    // Add more translations as needed
-                },
-                'french': {
-                    'Culture': 'Culture (French)',
-                    'Manas': 'Manas (French)',
-                    'Tush Kyiz': 'Tush kyiz (French)',
-                    'Sport': 'Sport (French)',
-                    'Flag': 'Flag (French)',
-                    'National Holidays': 'National Holidays (French)',
-                    // Add more translations as needed
-                }
-            };
-
-            // Function to update content based on language
-            function updateContent(language) {
-                var translation = translations[language] || translations['default'];
-
-                // Update content based on translation
-                headings.forEach(function (element) {
-                    var key = element.textContent.trim();
-                    element.textContent = translation[key] || key;
-                });
-
-                paragraphs.forEach(function (element) {
-                    var key = element.textContent.trim();
-                    element.textContent = translation[key] || key;
-                });
-            }
-
-            // Add an event listener to the language selector
-            languageSelector.addEventListener('click', function (event) {
-                event.preventDefault();
-                // Update content when language changes
-                updateContent(event.target.getAttribute('data-lang'));
-            });
-
-            // Manually initialize the Bootstrap dropdown
-            new bootstrap.Dropdown(document.querySelector('.btn-group'));
-
-            // Set initial content based on the default language
-            updateContent('default');
-
+          // Add more translations as needed
+        }
+      };
+  
+      // Function to update content based on language
+      function updateContent(language) {
+        var translation = translations[language] || translations['default'];
+  
+        // Update content based on translation
+        headings.forEach(function (element) {
+          var key = element.textContent.trim();
+          element.textContent = translation[key] || key;
         });
-    </script>
-</body>
+  
+        paragraphs.forEach(function (element) {
+          var key = element.textContent.trim();
+          element.textContent = translation[key] || key;
+        });
+      }
+  
+      // Add an event listener to the language selector
+      var languageButtons = document.querySelectorAll('.dropdown-item');
+      languageButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+          event.preventDefault();
+          // Update content when language changes
+          updateContent(button.dataset.lang);
+        });
+      });
+  
+      // Manually initialize the Bootstrap dropdown
+      new bootstrap.Dropdown(document.querySelector('.btn-group'));
+  
+      // Set initial content based on the default language
+      updateContent('default');
+    });
+  </script>
+  
+</body> 
 
 </html>
