@@ -45,3 +45,19 @@ iframe {
     width: 100%;
     height: 400px;
 }
+
+article {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the direction to place the image on the left */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Adjust as needed */
+}
+
+article img {
+    max-width: 100%; /* Make sure the image does not exceed the container width */
+    margin-right: 20px; /* Adjust as needed to create space between the image and text */
+}
+
+article p {
+    flex: 1; /* Allow the text to take remaining space */
+}

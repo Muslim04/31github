@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var interestLabel = document.getElementById('interestLabel');
     var interestYesLabel = document.getElementById('interestYesLabel');
     var interestNoLabel = document.getElementById('interestNoLabel');
+    var nameLabel = document.getElementById('nameLabel');
+    var resetButton = document.getElementById('resetButton');
+    var submitButton = document.getElementById('submitButton');
+    var address = document.getElementById('address');
+    var question = document.getElementById('question');
 
     // Define translations
     var translations = {
@@ -24,7 +29,13 @@ document.addEventListener('DOMContentLoaded', function () {
             'contactTitle': 'Contact us',
             'interestLabel': 'Did you interest in Kyrgyzstan?',
             'interestYesLabel': 'Yes',
-            'interestNoLabel': 'No'
+            'interestNoLabel': 'No',
+            'nameLabel': 'Name:',
+            'resetButton': 'Reset',
+            'submitButton': 'Submit',
+            'address': 'My Address: Mester utca 37, Budapest',
+            'question': 'Your question:',
+            
             // Add more translations as needed
         },
         'french': {
@@ -36,7 +47,14 @@ document.addEventListener('DOMContentLoaded', function () {
             'contactTitle': 'Contactez-nous',
             'interestLabel': 'Êtes-vous intéressé par le Kirghizistan?',
             'interestYesLabel': 'Oui',
-            'interestNoLabel': 'Non'
+            'interestNoLabel': 'Non',
+            'nameLabel': 'Nom :',
+            'resetButton': 'Réinitialiser',
+            'submitButton': 'Soumettre',
+            'address': 'Mon adresse : Mester utca 37, Budapest',
+            'question': 'Ta question'
+            
+
             // Add more translations as needed
         }
     };
@@ -55,6 +73,12 @@ document.addEventListener('DOMContentLoaded', function () {
         interestLabel.textContent = translation['interestLabel'];
         interestYesLabel.textContent = translation['interestYesLabel'];
         interestNoLabel.textContent = translation['interestNoLabel'];
+        nameLabel.textContent = translation['nameLabel'];
+        resetButton.textContent = translation['resetButton'];
+        submitButton.textContent = translation['submitButton'];
+        address.textContent = translation['address'];
+        question.textContent = translation['question'];
+
         // Update other content as needed
     }
 
