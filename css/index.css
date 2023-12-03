@@ -16,7 +16,7 @@ header {
 }
 
 nav {
-    background-color: #444;
+    background-color: #d30505;
     padding: 0.5em 0;
     text-align: center;
 }
@@ -45,4 +45,8 @@ h2 {
 
 p {
     color: #555;
+}
+
+.bg-light-red {
+    background-color: #840c0c; /* Replace with your preferred light red hex code */
 }
