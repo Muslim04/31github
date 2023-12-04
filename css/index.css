@@ -50,3 +50,11 @@ p {
 .bg-light-red {
     background-color: #840c0c; /* Replace with your preferred light red hex code */
 }
+.smallpiece{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Grey_icon.svg/640px-Grey_icon.svg.png');
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+.quo{
+    background-color: #ebe5e5;
+}

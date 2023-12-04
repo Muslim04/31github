@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Kyrgyzstan</title>
-    <!-- Bootstrap CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link href="css/index.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="css/index.css" id="defaultStylesheet">
     <link rel="stylesheet" type="text/css" href="css/index.css" id="frenchStylesheet" disabled>
 </head>
@@ -33,33 +32,28 @@
     </select>
 
     <section class="container mt-4">
-        <div class="shadow p-3 mb-5 rounded" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Grey_icon.svg/640px-Grey_icon.svg.png'); background-size: cover; backdrop-filter: blur(5px);">
+        <div class="shadow p-3 mb-5 rounded smallpiece">
 
             <h2 class="text-danger mb-4" id="sectionTitle">Welcome</h2>
             <p class="text-muted lead" id="sectionContent">
                 Are you ready to explore a new country?
             </p>
         </div>
-    </section>
-    <section class="container mt-4">
+
         <div class="row">
             <div class="col-md-6">
                 <img src="https://central-asia.guide/wp-content/uploads/2020/06/chingiz-aitmatov-portrait-1200x800_c.jpeg" alt="Famous Writer" class="img-fluid">
             </div>
             <div class="col-md-6">
-                <div class="quote-container p-4 shadow" style="background-color: #ebe5e5;">
+                <div class="quote-container p-4 shadow quo">
                     <blockquote class="blockquote text-center">
-                        <p class="mb-0"><q><i>The hardest thing for anyone is to be a human being every day</i></q> - Chingiz Aitmatov<br></p>
+                        <p class="mb-1" id="Quote"><i>The hardest thing for anyone is to be a human being every day-Chingiz Aitmatov</i></p>
                     </blockquote>
-                    <p class="text-justify">The Kyrgyz writer Chingiz Aitmatov, who has died aged 79, was the most celebrated representative of Kyrgyzstan, a landlocked, mountainous nation of 5 million people in the heart of central Asia, which was a Soviet republic until 1991. A bilingual and bicultural writer, Aitmatov wrote his prose and plays in both his native Kyrgyz and in Russian, and was translated into more than 150 languages. Described as a "magical socialist-realist" in the Russian press, he was able to combine elements of Kyrgyz folk-tales and epics with formally traditional Russian realism.</p>
+                    <p class="text-justify" id="infoChingiz">The Kyrgyz writer Chingiz Aitmatov, who has died aged 79, was the most celebrated representative of Kyrgyzstan, a landlocked, mountainous nation of 5 million people in the heart of central Asia, which was a Soviet republic until 1991. A bilingual and bicultural writer, Aitmatov wrote his prose and plays in both his native Kyrgyz and in Russian, and was translated into more than 150 languages. Described as a "magical socialist-realist" in the Russian press, he was able to combine elements of Kyrgyz folk-tales and epics with formally traditional Russian realism.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- <aside class="bg-info text-white text-center py-0">
-        <h3>Explore More</h3>
-        <p>Check out our travel tips and local recommendations to make the most of your trip!</p>
-    </aside> -->
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -77,6 +71,8 @@
             var cultureNavLink = document.getElementById('cultureNavLink');
             var geographyNavLink = document.getElementById('geographyNavLink');
             var contactUsNavLink = document.getElementById('contactUsNavLink');
+            var Quote = document.getElementById('Quote');
+            var infoChingiz = document.getElementById('infoChingiz');
     
             // Define translations
             var translations = {
@@ -89,6 +85,8 @@
                     'cultureNavLink': 'Culture',
                     'geographyNavLink': 'Geography',
                     'contactUsNavLink': 'Contact us',
+                    'Quote': 'The hardest thing for anyone is to be a human being every day' ,
+                    'infoChingiz': 'The Kyrgyz writer Chingiz Aitmatov, who has died aged 79, was the most celebrated representative of Kyrgyzstan, a landlocked, mountainous nation of 5 million people in the heart of central Asia, which was a Soviet republic until 1991. A bilingual and bicultural writer, Aitmatov wrote his prose and plays in both his native Kyrgyz and in Russian, and was translated into more than 150 languages. Described as a "magical socialist-realist" in the Russian press, he was able to combine elements of Kyrgyz folk-tales and epics with formally traditional Russian realism.'
                     // Add more translations as needed
                 },
                 'french': {
@@ -100,6 +98,8 @@
                     'cultureNavLink': 'Culture',
                     'geographyNavLink': 'Géographie',
                     'contactUsNavLink': 'Contactez-nous',
+                    'Quote': 'La chose la plus difficile pour quiconque est d\'être un être humain au quotidien',
+                    'infoChingiz': 'L\'écrivain kirghize Chingiz Aitmatov, décédé à l\'âge de 79 ans, était le représentant le plus célèbre du Kirghizistan, une nation montagneuse et enclavée de 5 millions d\'habitants au cœur de l\'Asie centrale, qui fut une république soviétique jusqu\'en 1991. Écrivain bilingue et biculturel, Aitmatov a écrit sa prose et ses pièces de théâtre à la fois dans son kirghize natal et en russe, et a été traduit dans plus de 150 langues. Décrit comme un « socialiste-réaliste magique » dans la presse russe, il était capable de combiner des éléments des contes populaires et des épopées kirghizes avec le réalisme russe formellement traditionnel.'
                     // Add more translations as needed
                 }
             };
@@ -117,6 +117,8 @@
                 cultureNavLink.textContent = translation['cultureNavLink'];
                 geographyNavLink.textContent = translation['geographyNavLink'];
                 contactUsNavLink.textContent = translation['contactUsNavLink'];
+                Quote.textContent = translation['Quote'];
+                infoChingiz.textContent = translation['infoChingiz'];
                 // Update other content as needed
             }
     
