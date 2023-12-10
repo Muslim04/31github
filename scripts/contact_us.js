@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Define translations
     var translations = {
         'default': {
-            'navbarBrand': 'WELCOME',
+            'navbarBrand': 'Kyrgyzstan',
             'basicInfoNavLink': 'Basic information',
             'cultureNavLink': 'Culture',
             'geographyNavLink': 'Geography',
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Add more translations as needed
         },
         'french': {
-            'navbarBrand': 'BIENVENUE',
+            'navbarBrand': 'Kirghizistan',
             'basicInfoNavLink': 'Informations de base',
             'cultureNavLink': 'Culture',
             'geographyNavLink': 'Géographie',

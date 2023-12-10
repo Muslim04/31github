@@ -67,3 +67,23 @@ p {
     flex-shrink: 0; 
     width: 500px;
 }
+
+aside {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+aside a {
+    text-decoration: none; /* Remove the default underline */
+    color: #057cfd; /* Set the default link color */
+}
+
+aside a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+aside a:visited {
+    color: #01458e; /* Change color for visited links */
+}
