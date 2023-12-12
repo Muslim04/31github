@@ -47,8 +47,10 @@ article {
     align-items: center; /* Center items vertically */
     margin-top: 20px; /* Adjust as needed */
 }
-
-article img {
+article div{
+    width: 50%;
+}
+article div img {
     max-width: 100%; /* Make sure the image does not exceed the container width */
     margin-right: 20px; /* Adjust as needed to create space between the image and text */
 }

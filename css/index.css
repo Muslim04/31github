@@ -36,6 +36,10 @@ nav a:hover {
 
 section {
     padding: 20px;
+    text-align: left;
+}
+.sectionContent {
+    padding: 20px;
     text-align: center;
 }
 
