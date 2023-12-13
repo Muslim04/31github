@@ -26,19 +26,22 @@ nav a:hover {
 
 section {
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 h2 {
     color: #e61717;
+    font-size: 2.0em;
 }
 
 h3 {
     color: #e61717;
+    font-size: 1.5em;
 }
 
 p {
     color: #555;
+    font-size: 1.2em;
 }
 .article1{
     display: flex;
@@ -78,6 +81,7 @@ aside {
 aside a {
     text-decoration: none; /* Remove the default underline */
     color: #057cfd; /* Set the default link color */
+    transition: color 0.3s ease;
 }
 
 aside a:hover {
@@ -85,5 +89,5 @@ aside a:hover {
 }
 
 aside a:visited {
-    color: #042d75; /* Change color for visited links */
+    color: #5407d0; /* Change color for visited links */
 }

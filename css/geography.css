@@ -26,25 +26,28 @@ nav a:hover {
 
 section {
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 h2 {
     color: #e61717;
+    font-size: 2.0em;
 }
 
 h3 {
     color: #e61717;
+    font-size: 1.5em;
 }
 
 p {
     color: #555;
+    font-size: 1.2em;
 }
 
 article {
     display: flex;
     flex-direction: row-reverse; /* Reverse the direction to place the image on the left */
-    align-items: center; /* Center items vertically */
+    align-items: left; /* Center items vertically */
     margin-top: 20px; /* Adjust as needed */
 }
 article div{

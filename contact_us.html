@@ -60,19 +60,19 @@
         <form action="mailto:muslimabdyvapov@gmail.com" method="post" enctype="text/plain">
             <div class="mb-3">
                 <label for="name" class="form-label" id="nameLabel">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <input type="text" class="form-control" id="name" name="name" maxlength="20" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">E-mail:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <input type="email" class="form-control" id="email" name="email" maxlength="30" required>
             </div>
             <div class="mb-3">
                 <label for="question" class="form-label">Your question:</label>
-                <textarea class="form-control" id="question" name="question" rows="3" required></textarea>
+                <textarea class="form-control" id="question" name="question" rows="3" maxlength="200" required></textarea>
             </div>
             <div class="mb-3">
                 <label for="country" class="form-label">Your country:</label>
-                <input type="text" class="form-control" id="country" name="country" required>
+                <input type="text" class="form-control" id="country" name="country" maxlength="20" required>
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">

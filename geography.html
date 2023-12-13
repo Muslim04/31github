@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark justify-content-start">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#" id="navbarBrandContent">Kyrgyzstan</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,10 +108,13 @@
     </table>
 
         
-        <h3 id="videoDescription">Video about Kyrgyzstan in English</h3>
-        <video controls poster="tasks/poster.png" width="750" src="tasks/LOST_IN_KYRGYZSTAN_4K_(1).mp4" class="ratio ratio-16x9">
-            
-        </video>
+    <h3 id="videoDescription">Video about Kyrgyzstan in English</h3>
+    <video controls poster="tasks/poster.png" width="750" class="ratio ratio-16x9">
+        <source src="tasks/LOST_IN_KYRGYZSTAN_4K_(1).mp4" type="video/mp4">
+        
+        <!-- Adding an audio description track -->
+        <track kind="subtitles" src="tasks/audio_description_transcript.vtt" srclang="en" label="English Descriptions" default>
+    </video>
     </section>
  
 

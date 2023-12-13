@@ -8,7 +8,7 @@ body {
 nav {
     background-color: #a00202e8;
     padding: 0.5em 0;
-    text-align: center;
+    text-align: left;
 }
 
 nav a {
@@ -26,7 +26,7 @@ nav a:hover {
 
 section {
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 h2 {
