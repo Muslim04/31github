@@ -2,7 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #edecec;
+    background-color: #f8f6f6;
 }
 
 nav {
@@ -12,7 +12,7 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #e0e0ea;
     text-decoration: none;
     padding: 0.5em 1em;
     margin: 0 5px;
@@ -29,12 +29,12 @@ section {
     text-align: left;
 }
 
-h2 {
+h1 {
     color: #e61717;
     font-size: 2.0em;
 }
 
-h3 {
+h2 {
     color: #e61717;
     font-size: 1.5em;
 }
@@ -44,10 +44,14 @@ p {
     font-size: 1.2em;
 }
 
+
+
+
+
 article {
     display: flex;
     flex-direction: row-reverse; /* Reverse the direction to place the image on the left */
-    align-items: left; /* Center items vertically */
+    align-items: center; /* Center items vertically */
     margin-top: 20px; /* Adjust as needed */
 }
 article div{
